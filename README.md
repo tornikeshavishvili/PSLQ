@@ -1,11 +1,11 @@
 # PSLQ
-# PSLQ Algorithm as a Visual Studio C++ Project
+# PSLQ Algorithm as a Visual Studio C++ Project.
 
-The original implementation found in following repository: [PSLQ Original Source](https://www.davidhbailey.com/dhbsoftware/)
+The original implementation found in following repository: [PSLQ dhbsoftware](https://www.davidhbailey.com/dhbsoftware/)
 
-It was ported into visual studio c++ project;
+It was ported into visual studio c++ project.
 
-Also Original arbitrary precion library was replaced with following: [HVKS](http://hvks.com/)
+Also Original arbitrary precision library was replaced with following: [HVKS](http://hvks.com/)
 
-There are plenty of rooms for improvements. 
+There are plenty of room for improvements. 
 Lets work together :)
