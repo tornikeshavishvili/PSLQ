@@ -1,8 +1,5 @@
 #include <iostream>
 #include <iomanip>
-//#include <cmath>
-
-//#include "float_precision.h"
 
 #include "../precision/fprecision.h"
 

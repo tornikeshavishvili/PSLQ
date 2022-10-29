@@ -72,7 +72,7 @@ enum round_mode { ROUND_NEAR, ROUND_UP, ROUND_DOWN, ROUND_ZERO };
 enum table_type { _LN2, _LN10, _PI, _EXP1, _SQRT2, _INVSQRT2, _SQRT3, _INVSQRT3 };
 
 // Default precision of 20 Radix digits if not specified
-static size_t PRECISION = 20;
+static const size_t PRECISION = 2000;
 
 // Default max number of digits to convert natively to decimal 
 static const int MAX_DECIMAL_DIGITS = sizeof(uintmax_t) >= 8 ? 19 : 9;
@@ -118,12 +118,12 @@ class float_precision_ctrl {
 
    public:
       // Constructor
-      float_precision_ctrl( unsigned int p=PRECISION, enum round_mode rm=ROUND_NEAR ): mRmode(rm), mPrec(p) {}
+      float_precision_ctrl( unsigned int p=PRECISION, enum round_mode rm=ROUND_NEAR ): mRmode(rm), mPrec(p) { }
 
       // Coordinate functions
       enum round_mode mode() const              { return mRmode; }
       enum round_mode mode( enum round_mode m ) { return( mRmode = m ); }
-      size_t precision() const					{ return mPrec>0 ? mPrec : PRECISION; }
+	  size_t precision() const { return mPrec > 0 ? mPrec : PRECISION; }
       size_t precision( unsigned int p )        { mPrec = p > 0 ? p : PRECISION; return mPrec; }
    };
 
@@ -370,9 +370,8 @@ class float_precision {
       class divide_by_zero		{};
       class domain_error		{};
       class base_error			{};
-
-
-   };
+ 
+};
 
 
 //////////////////////////////////////////////////////////

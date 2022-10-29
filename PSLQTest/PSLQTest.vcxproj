@@ -143,14 +143,12 @@
     <ClCompile Include="arpec_pslq\pslq1.cpp" />
     <ClCompile Include="arpec_pslq\pslq1_templates.cpp" />
     <ClCompile Include="arpec_pslq\pslq1_util.cpp" />
-    <ClCompile Include="arpec_pslq\pslq_main_util.cpp" />
     <ClCompile Include="precision\precisioncore.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arpec_pslq\matrix.h" />
     <ClInclude Include="arpec_pslq\pslq1.h" />
-    <ClInclude Include="arpec_pslq\pslq_main.h" />
     <ClInclude Include="precision\complexprecision.h" />
     <ClInclude Include="precision\fprecision.h" />
     <ClInclude Include="precision\fractionprecision.h" />

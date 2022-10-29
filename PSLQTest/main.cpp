@@ -2,8 +2,7 @@
 #include <iomanip>
 
 #include "precision/fprecision.h";
-#include "arpec_pslq/pslq1.h"
-#include "arpec_pslq/pslq_main.h"
+#include "arpec_pslq/pslq1.h" 
 
 using std::cout;
 using std::endl;
@@ -15,7 +14,9 @@ int main(int argc, char** argv) {
     int n = 8;
     int nr_digits = 20;
     int n_eps = (nr_digits < 700 ? 10 : 20) - nr_digits;
-    float_precision eps = pow(float_precision(10.0), float_precision(n_eps * 200));
+
+    float_precision eps = pow(float_precision(10.0), float_precision(n_eps*10));
+    cout << eps.precision() << " prec " << endl;
     matrix<float_precision> x(n);
     x(0) = "0.7522";
     x(1) = "0.14783";
@@ -40,7 +41,7 @@ int main(int argc, char** argv) {
     if (result == RESULT_RELATION_FOUND) {
         cout << "Relation found:" << endl;
         cout << std::fixed << std::setprecision(0);
-        for (int i = 0; i < n+1; i++) {
+        for (int i = 0; i < n; i++) {
             cout << std::setw(3) << i;
             cout << std::setw(24) << rel(i) << endl;
         }
